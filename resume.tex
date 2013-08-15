@@ -1,10 +1,11 @@
 \documentclass[a4paper,10pt]{article}
-\pagestyle{empty}
+\thispagestyle{empty}
 
 \usepackage[utf8]{inputenc}
 \usepackage[cm]{fullpage}
 \usepackage{enumitem}
 \usepackage{pifont}
+\usepackage{graphicx}
 \usepackage{marvosym}
 
 \newcommand{\name}[1]{\textbf{\huge{#1}}}
@@ -18,7 +19,7 @@
 \newcommand{\spacer}{\vspace*{1\baselineskip}}
 
 \newenvironment{details}
-{\begin{itemize}[label=\Squarepipe,leftmargin=0.2in]}
+{\begin{itemize}[label=\scalebox{.5}{\ding{117}},leftmargin=0.15in]}
 {\end{itemize}}
 
 \begin{document}
@@ -30,7 +31,7 @@ LyleJFranklin@gmail.com | 765.993.5947
 \vspace{0.2in}
 
 % first column
-\begin{minipage}[t]{0.55\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
 \header{Experience}
 
 \textbf{INTERACTIVE INTELLIGENCE\\Application Developer}\\
@@ -81,7 +82,7 @@ computer science and sociology
 \end{details}
 
 \end{minipage}
-\hspace{0.1 in}
+\hspace{0.35 in}
 % column 2
 \begin{minipage}[t]{0.35\textwidth}
 \header{Education}
@@ -97,6 +98,18 @@ B.S. in Computer Science\\}
 Minor in Foundations of Business\\
 Graduated: Dec. '12\\
 GPA: 3.95
+
+\spacer
+
+\header{Languages}
+
+\textbf{Proficient:}\\
+Java, C\#, JavaScript (Backbone, Knockout), SQL, ASP.NET MVC, HTML, CSS
+
+\spacer
+
+\textbf{Familiar:}\\
+C++, Objective C, PHP
 
 \spacer
 
@@ -134,17 +147,6 @@ GPA: 3.95
   In Proc. - GLS '13.
 \end{details}
 \vspace{-0.1in}
-
-\spacer
-
-\header{Languages}
-
-\textbf{Proficient:}\\
-Java, C\#, JavaScript (Backbone, Knockout), SQL, ASP.NET MVC, HTML, CSS
-%\vspace*{1\baselineskip}
-
-\textbf{Familiar:}\\
-C++, Objective C, PHP
 
 \end{minipage}
 
