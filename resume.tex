@@ -3,39 +3,61 @@
 \usepackage{fullpage}
 \usepackage{enumitem}
 \usepackage{pifont}
+\usepackage{marvosym}
 
 \newcommand{\name}[1]{\textbf{\huge{#1}}}
+\newcommand{\header}[1]
+{
+{\Large{\uppercase{#1}}}
+\vspace{0.05in}
+\hrule
+\vspace{0.15in}
+}
+
+\newenvironment{details}
+{\begin{itemize}[label=\ding{212},leftmargin=0.2in]}
+{\end{itemize}}
 
 \begin{document}
 
 \name{LYLE FRANKLIN}
+\vspace{0.2in}
 
 % first column
 \begin{minipage}[t]{0.6\textwidth}
-{\Large EXPERIENCE}
+\header{Experience}
 
-\hrulefill
+\textbf{INTERACTIVE INTELLIGENCE - Indianapolis, IN}
+\textbf{Application Developer}
+
+Dec. '12 - July '13
+
+\begin{details}
+  \item Design and implement internal business tools used by hundreds of employees
+  \item Rapid prototyping, quickly implementing new features and bug fixes based on user feedback
+  \item Full-stack development: SQL, server-side ASP.NET MVC and C\#, JavaScript frameworks, CSS
+\end{details}
+
 
 \textbf{UNIVERSITY OF ILLINOIS - Urbana-Champaign, IL}
-\textbf{UNDERGRADUATE RESEARCHER}
+\textbf{Undergraduate Researcher}
 
 May '12 - Aug. '12
 
-\begin{itemize}[label=\ding{212},leftmargin=0.2in]
+\begin{details}
   \item Develop refactoring plugin for the NetBeans IDE
-  \item Collaborate with employee from Oracle
   \item Plugin accepted as official patch to NetBeans’ source code
   \item Write research paper detailing development and applicability of the refactoring
-\end{itemize}
+  \item Demo presented at International Conference on Software Engineering '13
+  \item Paper accepted at European Software Engineering Conference '13
+\end{details}
 
 
 \end{minipage}
 \hspace{0.1 in}
 % column 2
 \begin{minipage}[t]{0.3\textwidth}
-EDUCATION
-
-\hrulefill
+\header{EDUCATION}
 \end{minipage}
 
 \end{document}
