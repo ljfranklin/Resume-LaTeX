@@ -1,2 +1,4 @@
-Resume-2013
+Resume
 ===========
+
+My resume created using LaTeX
