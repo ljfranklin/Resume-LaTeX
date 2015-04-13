@@ -1,0 +1,24 @@
+#!/bin/bash
+
+pdf_file="$1"
+if [[ -z $pdf_file ]]; then
+    echo "Did not specify pdf file to convert"
+    exit 1
+fi
+
+docker_img=klokoy/pdf2htmlex
+working_dir=/working
+convert_cmd=pdf2htmlEX
+
+has_img="$(docker images | grep $docker_img)"
+if [[ -z "$has_img" ]]; then
+    docker pull $docker_img
+fi
+
+docker run \
+    -v $PWD:$working_dir \
+    $docker_img \
+    $convert_cmd \
+    --data-dir $working_dir/pdf2htmlEX-data-dir \
+    --dest-dir $working_dir \
+    $working_dir/$pdf_file
