@@ -30,6 +30,7 @@
 @base.min.css
 # PDF specific CSS styles - Do not modify
 $css
+@custom.css
 
 #############
 # Do not modify
@@ -43,7 +44,7 @@ $css
 # The container of PDF pages
 # check base.css for an example and requirements of its CSS styles
 """
-<div id="page-container">
+<div class="pdf2htmlEX-container">
 """
 $pages
 """

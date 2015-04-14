@@ -1,0 +1,10 @@
+
+/* fixes issue where hr lines are too low */
+.pdf2htmlEX-container .h1,
+.pdf2htmlEX-container .h2,
+.pdf2htmlEX-container .h3,
+.pdf2htmlEX-container .h4,
+.pdf2htmlEX-container .h5,
+.pdf2htmlEX-container .h6 {
+    margin: 0;
+}
