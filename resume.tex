@@ -5,13 +5,16 @@
 \usepackage[cm]{fullpage}
 \usepackage{enumitem}
 \usepackage{pifont}
+\usepackage{lmodern}
+\renewcommand\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{marvosym}
+\usepackage{hyperref}
 
 \newcommand{\name}[1]{\textbf{\huge{#1}}}
 \newcommand{\header}[1]
 {
-\vspace{0.40in}
+\vspace{0.10in}
 {\Large \textbf {\uppercase{#1}}}
 \vspace{0.05in}
 \hrule
@@ -22,61 +25,58 @@
 \newenvironment{details}
 {\begin{itemize}[label=\scalebox{.5}{\ding{117}},leftmargin=0.15in]}
 {\end{itemize}}
+\newenvironment{nested}
+{\begin{itemize}[label=\scalebox{.5}{\ding{117}}]}
+{\end{itemize}}
 
 \begin{document}
 
 \name{LYLE FRANKLIN}\\
 \indent
-LyleJFranklin@gmail.com | 765.993.5947
+lylejfranklin@gmail.com | \url{https://lylefranklin.com} | 765.993.5947
+
+\spacer
+
+Generalist software engineer with a focus in distributed systems and automation
+
+\textit{Imagine, Build, Teach}
 
 % first column
 \begin{minipage}[t]{0.5\textwidth}
 \header{Experience}
+{\fontsize{14}{16}\selectfont \textbf{Staff Software Engineer @ Pivotal}}\\
+Jan '15 - Present \textbar\enspace San Francisco, CA
 
+\textbf{Lead for Release Engineering (2018)}
+\begin{details}
+  \item Deployed Cloud Foundry under different configurations to CI environments 50+ times each week
+  \item Reduced the number of configuration file lines from 60K+ to 17K without removing functionality
+  \item Designed and built a self-service system to enable teams across the organization to integrate changes
+\end{details}
+\textbf{Engineer for Cloud Foundry API (CAPI) (2017)}
+\begin{details}
+  \item Developed microservices using Go and Ruby on Rails for the Cloud Foundry Control Plane
+  \item Designed a reusable system for engineers to claim an already deployed environment for manual testing, saving hours each week in wasted developer productivity across the company
+\end{details}
+\textbf{Lead for BOSH CPI (2016)}
+\begin{details}
+  \item Developed components to deploy Cloud Foundry across AWS, GCP, vSphere, or Azure by abstracting away the infrastructure from the rest of the deployment system 
+  \item Created Google CPI to deploy Cloud Foundry to Google Cloud Platform and worked with Google engineers to transfer ownership of the codebase to Google
+\end{details}
+\textbf{Lead for Core Services (2015)}
+\begin{details}
+  \item Maintained the managed MySQL service for Cloud Foundry
+  \item Designed and implemented a streaming backup solution to encrypt and compress backups before uploading to a blobstore
+\end{details}
 
-\textbf{IBM\\Extreme Blue Intern}\\
-Austin, TX\\
-May '14 - Aug. '14
+{\fontsize{14}{16}\selectfont \textbf{Extreme Blue Intern @ IBM}}\\
+May '14 - Aug. '14 \textbar\enspace Austin, TX
 
 \begin{details}
   \item One of only 32 hires out of 1,800 applicants (\textless2\% acceptance rate)
   \item Built system to allow non-technical users to deploy solutions to IBM's Bluemix cloud hosting service
   \item Utilized Vagrant, Docker, and Cloud Foundry to standardize development and production environments
-  \item Pitched project to executives and distinguished engineers on a weekly basis 
-\end{details}
-
-\textbf{INTERACTIVE INTELLIGENCE\\Application Developer}\\
-Indianapolis, IN\\
-Dec. '12 - July '13
-
-\begin{details}
-  \item Designed and implemented internal business tools used by hundreds of employees
-  \item Used rapid prototyping, quickly implemented new features and bug fixes based on user feedback
-  \item Full-stack development: Implemented database, server-side REST API, front-end JS frameworks, and CSS
-\end{details}
-
-
-\textbf{UNIVERSITY OF ILLINOIS\\Undergraduate Researcher Intern}\\
-Urbana-Champaign, IL\\
-May '12 - Aug. '12
-
-\begin{details}
-  \item Developed refactoring plugin for the NetBeans IDE
-  \item Plugin accepted as official patch to NetBeans’ source code
-  \item Paper accepted at European Software Engineering Conference '13
-\end{details}
-
-\textbf{VIRGINIA B. BALL CENTER\\Technical Lead}\\
-Muncie, IN\\
-Jan. ‘12 - May ‘12
-
-\begin{details}
-  \item Collaborated with an interdisciplinary team of students to create
-an online game for the Indianapolis Children’s Museum
-  \item Student-driven studio learning, worked from 8 to 5 Monday
-through Friday for a full semester
-  \item Developed game with Unity3D, participated in daily Scrum meetings, and utilized Test-driven
-development
+  \item Pitched project to executives and distinguished engineers on a weekly basis
 \end{details}
 
 \end{minipage}
@@ -88,7 +88,7 @@ development
 \textbf{Univ. of Southern California\\
 M.S. in Computer Science\\}
 Spec. in Software Engineering\\
-Expected Graduation: Dec. '14\\
+Graduated: Dec. '14\\
 GPA: 4.00
 \spacer
 
@@ -102,44 +102,36 @@ GPA: 3.95
 
 \header{Skills}
 
-\textbf{Languages:}\\
-Java, JavaScript, CSS/LESS/SASS, Python (learning)
+\textbf{Written production code with:}\\
+Go, Ruby, Bash, SQL
 
 \spacer
 
-\textbf{Frameworks:}\\
-Node.js, Backbone.js, AngularJS, Django, Twisted
+\textbf{Played around with:}\\
+Java, JavaScript, CSS/LESS/SASS
 
 \spacer
 
-\textbf{Databases:}\\
-MySQL, MongoDB
+\textbf{Deployed with:}\\
+Kubernetes, Cloud Foundry, ConcourseCI, Terraform, Ansible
 
 \spacer
 
-\header{Toolbox}
-
-\textbf{Build:}\\
-Grunt, Vagrant, Docker, Bower
+\textbf{Deployed to:}\\
+Google Cloud, AWS, vSphere, Azure
 
 \spacer
 
-\textbf{Test:}\\
-Jenkins, Travis, Karma, Selenium
-
-\spacer
-
-\textbf{Deploy:}\\
-IBM Bluemix, Cloud Foundry, EC2, Heroku
+\textbf{Developed by:}\\
+Test Driven Development, Pair Programming
 
 \spacer\spacer
 
-\header{Interests:}
+\header{Projects:}
 \begin{details}
-  \item Building Developer Tools
-  \item Scrum/Extreme Programming
-  \item Automation
-  \item Test-Driven Development
+  \item 2-hour video explaining TLS protocol: \url{https://youtu.be/yzz3bcnWf7M}
+  \item Guide to deploying Kubernetes on Raspberry Pi: \url{https://github.com/ljfranklin/k8s-pi}
+  \item Terraform resource for ConcourseCI: \url{https://github.com/ljfranklin/terraform-resource}
 \end{details}
 
 \end{minipage}
